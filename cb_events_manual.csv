@@ -1,0 +1,16 @@
+# CB 事件清單（人工維護，為 ground truth）。
+# 以 # 開頭的列是說明註解，讀取時會被跳過（pandas read_csv(comment="#")）。
+#
+# 欄位說明：
+#   stock_id           : 股票代碼（不含 .TW/.TWO 後綴），例如 2330
+#   stock_name         : 股票名稱，例如 台積電
+#   cb_code            : 可轉債代碼，例如 23301（選填，僅供辨識用）
+#   pricing_date       : 定價基準日 T0，格式 YYYY-MM-DD（重大訊息公告日，需人工核對，不可自動推算）
+#   underwriting_method: 承銷方式，僅能填 "競價拍賣" 或 "詢價圈購"
+#   guaranteed         : 有無擔保，僅能填 "有擔保" 或 "無擔保"
+#   remarks            : 備註，選填
+#
+# 範例列（請刪除或替換為實際資料）：
+stock_id,stock_name,cb_code,pricing_date,underwriting_method,guaranteed,remarks
+2330,台積電,23301,2026-06-15,詢價圈購,無擔保,範例資料-請替換
+2454,聯發科,24541,2026-07-20,競價拍賣,無擔保,範例資料-請替換
